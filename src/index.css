@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ========== 深色（默认）========== */
+  :root, [data-theme='dark'] {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.625rem;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* 调色板（深） */
+    --c-zinc-100: 244 244 245; --c-zinc-200: 228 228 231; --c-zinc-300: 212 212 216;
+    --c-zinc-400: 161 161 170; --c-zinc-500: 113 113 122; --c-zinc-600: 82 82 91;
+    --c-zinc-700: 63 63 70; --c-zinc-800: 39 39 42; --c-zinc-900: 24 24 27; --c-zinc-950: 9 9 11;
+    --c-amber-300: 252 211 77; --c-amber-400: 251 191 36; --c-amber-500: 245 158 11;
+    --c-amber-600: 217 119 6; --c-amber-700: 180 83 9; --c-amber-800: 146 64 14;
+    --c-amber-900: 120 53 15; --c-amber-950: 69 26 3;
+    --c-emerald-100: 209 250 229; --c-emerald-200: 167 243 208; --c-emerald-300: 110 231 183;
+    --c-emerald-400: 52 211 153; --c-emerald-500: 16 185 129; --c-emerald-600: 5 150 105;
+    --c-emerald-700: 4 120 87; --c-emerald-800: 6 95 70; --c-emerald-900: 6 78 59; --c-emerald-950: 2 44 34;
+    --c-violet-200: 221 214 254; --c-violet-300: 196 181 253; --c-violet-400: 167 139 250;
+    --c-violet-600: 124 58 237; --c-violet-700: 109 40 217; --c-violet-800: 91 33 182; --c-violet-950: 46 16 101;
+    --c-sky-400: 56 189 248; --c-sky-500: 14 165 233; --c-sky-600: 2 132 199;
+    --c-sky-800: 7 89 133; --c-sky-950: 8 47 73;
+    --c-red-300: 252 165 165; --c-red-400: 248 113 113; --c-red-500: 239 68 68;
+    --c-red-800: 153 27 27; --c-red-900: 127 29 29; --c-red-950: 69 10 10;
+  }
+
+  /* ========== 浅色 ========== */
+  [data-theme='light'] {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* 调色板（浅）：背景阶倒置、文字阶加深、彩色底改浅 tint、彩色文字加深 */
+    --c-zinc-100: 9 9 11; --c-zinc-200: 24 24 27; --c-zinc-300: 39 39 42;
+    --c-zinc-400: 63 63 70; --c-zinc-500: 82 82 91; --c-zinc-600: 113 113 122;
+    --c-zinc-700: 212 212 216; --c-zinc-800: 228 228 231; --c-zinc-900: 244 244 245; --c-zinc-950: 255 255 255;
+    --c-amber-300: 180 83 9; --c-amber-400: 217 119 6; --c-amber-500: 217 119 6;
+    --c-amber-600: 180 83 9; --c-amber-700: 146 64 14; --c-amber-800: 253 230 138;
+    --c-amber-900: 254 243 199; --c-amber-950: 255 251 235;
+    --c-emerald-100: 6 78 59; --c-emerald-200: 6 95 70; --c-emerald-300: 4 120 87;
+    --c-emerald-400: 5 150 105; --c-emerald-500: 16 185 129; --c-emerald-600: 5 150 105;
+    --c-emerald-700: 4 120 87; --c-emerald-800: 167 243 208; --c-emerald-900: 209 250 229; --c-emerald-950: 236 253 245;
+    --c-violet-200: 91 33 182; --c-violet-300: 109 40 217; --c-violet-400: 124 58 237;
+    --c-violet-600: 124 58 237; --c-violet-700: 196 181 253; --c-violet-800: 221 214 254; --c-violet-950: 245 243 255;
+    --c-sky-400: 2 132 199; --c-sky-500: 14 165 233; --c-sky-600: 2 132 199;
+    --c-sky-800: 186 230 253; --c-sky-950: 240 249 255;
+    --c-red-300: 185 28 28; --c-red-400: 220 38 38; --c-red-500: 239 68 68;
+    --c-red-800: 254 202 202; --c-red-900: 254 226 226; --c-red-950: 254 242 242;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
