@@ -70,7 +70,11 @@ async function main() {
   await api('/api/queue/start', {})
 
   await app.whenReady()
-  const win = new BrowserWindow({ width: 1480, height: 920, show: false, backgroundColor: '#09090b' })
+  // 按本机屏幕实际工作区尺寸开窗，保证截图与用户实际看到的布局比例一致
+  const { screen } = require('electron')
+  const area = screen.getPrimaryDisplay().workAreaSize
+  console.log('screen:', area.width, 'x', area.height)
+  const win = new BrowserWindow({ width: area.width, height: area.height, show: false, backgroundColor: '#09090b' })
   await win.loadURL(API)
   await win.webContents.executeJavaScript(`localStorage.setItem('offloadmaster:theme','dark'); 'ok'`)
   await sleep(1500)

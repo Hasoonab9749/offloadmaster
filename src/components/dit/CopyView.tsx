@@ -73,8 +73,8 @@ export default function CopyView({ engine }: { engine: DitEngine }) {
 
   return (
     <div className="grid gap-4 lg:grid-cols-[1fr_1.4fr]">
-      {/* 左列：源 + 目标 */}
-      <div className="space-y-4">
+      {/* 左列：源 + 目标（min-w-0：防止长路径等内容把右列撑爆、挤压本列宽度） */}
+      <div className="min-w-0 space-y-4">
         <Card className="border-zinc-800 bg-zinc-900/60">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -265,8 +265,8 @@ export default function CopyView({ engine }: { engine: DitEngine }) {
         })()}
       </div>
 
-      {/* 右列：任务队列 */}
-      <Card className="border-zinc-800 bg-zinc-900/60">
+      {/* 右列：任务队列（min-w-0：长路径自动截断，不把左列挤窄） */}
+      <Card className="min-w-0 border-zinc-800 bg-zinc-900/60">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <CardTitle className="flex items-center gap-2 text-sm text-zinc-200">
