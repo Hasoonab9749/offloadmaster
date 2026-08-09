@@ -4,6 +4,18 @@
 
 **OffloadMaster 是一款面向影视现场的 DIT（数字影像工程师）拷卡软件**，专注于把摄影机存储卡里的素材安全、可验证地拷入素材盘，并留下完整的校验记录。对标 Silverstack、YoYotta、KOCARD 等专业工具的核心拷卡流程，免费、开源、跨平台。
 
+![素材拷贝主界面（深色）](docs/screenshots/main-dark.png)
+
+## 界面
+
+| 拷贝完成（浅色主题） | 校验中心 |
+| --- | --- |
+| ![浅色主题](docs/screenshots/main-light.png) | ![校验中心](docs/screenshots/verify-dark.png) |
+
+| 日志台账 · MHL 导出 |
+| --- |
+| ![日志台账](docs/screenshots/log-dark.png) |
+
 ## 下载
 
 | 平台 | 安装包 | 说明 |
