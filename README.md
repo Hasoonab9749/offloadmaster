@@ -20,8 +20,8 @@
 
 | 平台 | 安装包 | 说明 |
 | --- | --- | --- |
-| macOS（M 芯片） | [OffloadMaster-2.5.0-arm64.dmg](https://github.com/rehedon/offloadmaster/releases/download/v2.5.0/OffloadMaster-2.5.0-arm64.dmg) | 首次打开如被系统拦截，按安装窗口里的「安装说明」放行一次即可 |
-| Windows 10 / 11（x64） | [OffloadMaster-2.5.0-win-x64.exe](https://github.com/rehedon/offloadmaster/releases/download/v2.5.0/OffloadMaster-2.5.0-win-x64.exe) | 双击安装，可自选安装位置 |
+| macOS（M 芯片） | [OffloadMaster-2.5.1-arm64.dmg](https://github.com/rehedon/offloadmaster/releases/download/v2.5.1/OffloadMaster-2.5.1-arm64.dmg) | 首次打开如被系统拦截，按安装窗口里的「安装说明」放行一次即可 |
+| Windows 10 / 11（x64） | [OffloadMaster-2.5.1-win-x64.exe](https://github.com/rehedon/offloadmaster/releases/download/v2.5.1/OffloadMaster-2.5.1-win-x64.exe) | 双击安装，可自选安装位置 |
 
 历史版本与更新说明见 [Releases](https://github.com/rehedon/offloadmaster/releases) 和 [CHANGELOG](CHANGELOG.md)。
 

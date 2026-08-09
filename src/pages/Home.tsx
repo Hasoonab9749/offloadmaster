@@ -1,6 +1,6 @@
 // OffloadMaster —— 影视 DIT 素材拷贝管理工作站
 import { useEffect, useState } from 'react'
-import { HardDriveDownload, ShieldCheck, FolderCog, ScrollText, MemoryStick, Clapperboard, Sun, Moon } from 'lucide-react'
+import { HardDriveDownload, ShieldCheck, FolderCog, ScrollText, MemoryStick, Clapperboard, Sun, Moon, Github } from 'lucide-react'
 import { Toaster } from '@/components/ui/sonner'
 import CopyView from '@/components/dit/CopyView'
 import VerifyView from '@/components/dit/VerifyView'
@@ -104,6 +104,16 @@ export default function Home() {
             {theme === 'dark' ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
             {theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}
           </button>
+          {/* 作者署名 + GitHub 开源地址（点击用系统浏览器打开） */}
+          <a
+            href="https://github.com/rehedon/offloadmaster"
+            target="_blank"
+            rel="noreferrer"
+            title="在 GitHub 上查看 OffloadMaster 源码"
+            className="flex w-full items-center justify-center gap-1.5 py-0.5 text-[10px] text-zinc-600 transition-colors hover:text-zinc-300">
+            <Github className="h-3 w-3" />
+            热河东 · GitHub 开源项目
+          </a>
         </div>
       </aside>
 
