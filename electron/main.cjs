@@ -2,12 +2,15 @@
 // 内嵌本地服务（真实文件拷贝/校验），窗口加载本机界面，提供系统原生文件夹选择框
 const { app, BrowserWindow, shell, dialog, ipcMain } = require('electron')
 const path = require('path')
+const { pathToFileURL } = require('url')
 
 let server = null
 let mainWindow = null
 
 async function startOnFreePort(preferred) {
-  const { startServer } = await import(path.join(__dirname, '../server/index.js'))
+  // Windows 下动态 import 必须是 file:// 网址形式，直接给 C:\ 路径会被当成协议报错
+  const serverUrl = pathToFileURL(path.join(__dirname, '../server/index.js')).href
+  const { startServer } = await import(serverUrl)
   for (let port = preferred; port < preferred + 20; port++) {
     try {
       const s = startServer(port, '127.0.0.1')
@@ -33,7 +36,16 @@ ipcMain.handle('pick-folder', async (_event, title) => {
 })
 
 async function createWindow() {
-  const started = await startOnFreePort(8310)
+  let started
+  try {
+    started = await startOnFreePort(8310)
+  } catch (err) {
+    // 服务起不来时不静默挂后台：明确弹窗告知原因并退出
+    dialog.showErrorBox('OffloadMaster 启动失败',
+      `本地服务未能启动：${err.message}\n\n请彻底退出软件后重试；反复出现请截图联系作者（GitHub: rehedon/offloadmaster）。`)
+    app.quit()
+    return
+  }
   server = started.server
 
   mainWindow = new BrowserWindow({
@@ -69,7 +81,11 @@ async function createWindow() {
   })
 }
 
-app.whenReady().then(createWindow)
+app.whenReady().then(createWindow).catch((err) => {
+  // 兜底：任何未捕获的启动异常都不要留下「无窗口僵尸进程」
+  dialog.showErrorBox('OffloadMaster 启动失败', String(err && err.message ? err.message : err))
+  app.quit()
+})
 
 app.on('window-all-closed', () => {
   if (server) server.close()

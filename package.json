@@ -1,7 +1,7 @@
 {
   "name": "offloadmaster",
   "private": true,
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "影视 DIT 拷卡软件：存储卡素材拷贝、哈希校验、MHL 台账、自动归档（macOS / Windows）",
   "author": "热河东",
   "type": "module",
